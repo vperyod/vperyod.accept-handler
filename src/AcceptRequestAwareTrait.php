@@ -84,12 +84,12 @@ trait AcceptRequestAwareTrait
     }
 
     /**
-     * NegotiateMedia
+     * Negotiate media
      *
      * @param Request $request   PSR7 Request
      * @param array   $available array of available media types
      *
-     * @return mixed
+     * @return Aura\Accept\Media\MediaValue|false
      *
      * @access protected
      */
@@ -99,12 +99,12 @@ trait AcceptRequestAwareTrait
     }
 
     /**
-     * NegotiateCharset
+     * Negotiate charset
      *
      * @param Request $request   PSR7 Request
      * @param array   $available array of available charsets
      *
-     * @return mixed
+     * @return Aura\Accept\Charset\CharsetValue
      *
      * @access protected
      */
@@ -114,12 +114,12 @@ trait AcceptRequestAwareTrait
     }
 
     /**
-     * NegotiateLanguage
+     * Negotiate language
      *
      * @param Request $request   PSR7 Request
      * @param array   $available arrayof available languages
      *
-     * @return mixed
+     * @return Aura\Accept\Language\LanguageValue
      *
      * @access protected
      */

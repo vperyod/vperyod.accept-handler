@@ -47,7 +47,8 @@ class AcceptHandler
     protected $acceptFactoryFactory;
 
     /**
-     * MediaTypes
+     * Media types
+     * A map of file .extensions to media types
      *
      * @var array
      *
@@ -56,11 +57,9 @@ class AcceptHandler
     protected $mediaTypes = [];
 
     /**
-     * __constuct
+     * Create an AcceptHandler
      *
-     * @param callable $acceptFactoryFactory DESCRIPTION
-     *
-     * @return mixed
+     * @param callable $acceptFactoryFactory factory to create an AcceptFactory
      *
      * @access public
      */
@@ -71,7 +70,7 @@ class AcceptHandler
     }
 
     /**
-     * Resumes Acceptenticated Session
+     * Adds Accept object to request
      *
      * @param Request  $request  PSR7 HTTP Request
      * @param Response $response PSR7 HTTP Response
@@ -91,7 +90,7 @@ class AcceptHandler
     }
 
     /**
-     * SetMediaTypes
+     * Set media types
      *
      * @param array $types A map of file .extensions to media types
      *
@@ -106,12 +105,12 @@ class AcceptHandler
     }
 
     /**
-     * NewAcceptFactory
+     * Create a new AcceptFactory
      *
-     * @param array $server DESCRIPTION
-     * @param array $types  DESCRIPTION
+     * @param array $server representing $_SERVER
+     * @param array $types  Media Types array
      *
-     * @return mixed
+     * @return AcceptFactory
      *
      * @access protected
      */
@@ -121,11 +120,11 @@ class AcceptHandler
     }
 
     /**
-     * NewAccept
+     * Create a new Accept
      *
-     * @param Request $request DESCRIPTION
+     * @param Request $request PSR7 Request
      *
-     * @return mixed
+     * @return Accept
      *
      * @access protected
      */
