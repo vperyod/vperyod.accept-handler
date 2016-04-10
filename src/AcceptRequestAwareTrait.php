@@ -68,7 +68,7 @@ trait AcceptRequestAwareTrait
      * @param Request $request PSR7 Request
      *
      * @return Accept
-     * @throws InvalidArgumentException if accept attribute is not an `Accept`
+     * @throws InvalidAcceptException if accept attribute is not an `Accept`
      *
      * @access protected
      */
@@ -76,8 +76,9 @@ trait AcceptRequestAwareTrait
     {
         $accept = $request->getAttribute($this->acceptAttribute);
         if (! $accept instanceof Accept) {
-            throw new \InvalidArgumentException(
-                'Accept attribute not available in request'
+            throw new Exception\InvalidAcceptException(
+                'Accept not available in request at: '
+                . $this->acceptAttribute
             );
         }
         return $accept;

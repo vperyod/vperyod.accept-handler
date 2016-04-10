@@ -78,7 +78,10 @@ class AcceptRequestTest extends \PHPUnit_Framework_TestCase
 
     public function testError()
     {
-        $this->setExpectedException('InvalidArgumentException');
+        $this->setExpectedException(
+            'Vperyod\AcceptHandler\Exception\InvalidAcceptException',
+            'Accept not available in request at: aura/accept:accept'
+        );
 
         $req = ServerRequestFactory::fromGlobals();
 

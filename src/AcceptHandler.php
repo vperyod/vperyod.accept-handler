@@ -1,6 +1,6 @@
 <?php
 /**
- * Accept Handler
+ * Vperyod\AcceptHandler
  *
  * PHP version 5
  *
