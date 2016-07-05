@@ -37,6 +37,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
  */
 abstract class AbstractResponderLocator
 {
+
     /**
      * Responder factories
      *
@@ -45,6 +46,33 @@ abstract class AbstractResponderLocator
      * @access protected
      */
     protected $factories = [];
+
+    /**
+     * Request
+     *
+     * @var Request
+     *
+     * @access protected
+     */
+    protected $request;
+
+    /**
+     * Response
+     *
+     * @var Response
+     *
+     * @access protected
+     */
+    protected $response;
+
+    /**
+     * Payload
+     *
+     * @var mixed
+     *
+     * @access protected
+     */
+    protected $payload;
 
     /**
      * Create a responder locator
