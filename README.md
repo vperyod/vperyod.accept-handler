@@ -70,7 +70,7 @@ class MyResponder
 [Aura\Accept]: https://github.com/auraphp/Aura.Accept
 
 [ico-version]: https://img.shields.io/packagist/v/vperyod/accept-handler.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/vperyod/vperyod.accept-handler/master.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/vperyod/vperyod.accept-handler/develop.svg?style=flat-square
 [ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/vperyod/vperyod.accept-handler.svg?style=flat-square
 [ico-code-quality]: https://img.shields.io/scrutinizer/g/vperyod/vperyod.accept-handler.svg?style=flat-square
 
